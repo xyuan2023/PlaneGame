@@ -1,0 +1,41 @@
+/* 飞机大战 - 页面样式（纸张质感 + 手绘风） */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  /* 模拟一张旧纸张的背景 */
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(255, 250, 235, 0.55), transparent 55%),
+    radial-gradient(ellipse at 85% 90%, rgba(140, 115, 70, 0.35), transparent 60%),
+    linear-gradient(160deg, #ddd3b6 0%, #c8bb9c 55%, #b5a888 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Comic Sans MS", "Segoe Print", "Chalkboard SE", cursive;
+}
+
+#game {
+  /* 保持 480:700 比例，自适应视口高度/宽度 */
+  height: min(97vh, calc(100vw * (700 / 480)));
+  width: auto;
+  aspect-ratio: 480 / 700;
+  border-radius: 14px;
+  background: #efe9d8;
+  box-shadow:
+    0 20px 55px rgba(60, 45, 20, 0.5),
+    0 3px 0 rgba(255, 255, 255, 0.4) inset,
+    0 0 0 3px rgba(90, 70, 40, 0.25);
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+}
